@@ -1,8 +1,9 @@
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Test;
 
 public class UniqueStringFilterTest {
 
@@ -14,7 +15,7 @@ public class UniqueStringFilterTest {
 		System.out.println(result);
 
 		String[] expectedResults = {" Sunny it is", "hello world"};
-		Assert.assertArrayEquals("Result doesnot match!", expectedResults, result.toArray());
+		Assert.assertArrayEquals("Result does not match!", expectedResults, result.toArray());
 	}
 
 }
