@@ -17,8 +17,14 @@ public class Main {
         }
     }
 
-    public static boolean answerQuestion(String question) {
-        System.out.println(question);
-        return "Y".equalsIgnoreCase(new Scanner(System.in).nextLine());
+    static boolean answerQuestion(String question) {
+        while (true) {
+            System.out.println(question);
+            String input = new Scanner(System.in).nextLine().trim();
+            if (input.length() == 0) {
+                continue;
+            }
+            return "Y".equalsIgnoreCase(input.substring(0, 1));
+        }
     }
 }
